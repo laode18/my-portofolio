@@ -28,6 +28,8 @@ import javaImage from '../images/oop/java.png';
 import cImage from '../images/oop/c.png';
 import cplusImage from '../images/oop/c++.png';
 import csharpImage from '../images/oop/csharp.png';
+import netImage from '../images/oop/net.png';
+import netaspImage from '../images/oop/asp_net.png';
 
 import flutterImage from '../images/android/flutter.png';
 import rnImage from '../images/android/react-native.png';
@@ -313,6 +315,14 @@ export const skills = [
       {
         name: "C#",
         image: csharpImage,
+      },
+      {
+        name: ".NET",
+        image: netImage,
+      },
+      {
+        name: "ASP.NET",
+        image: netaspImage,
       },
     ],
   },
