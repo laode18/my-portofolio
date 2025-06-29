@@ -137,7 +137,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSending(true);
-    emailjs.sendForm('service_3pfrpss', 'template_3807sga', form.current, 'lvLwgknOdp6R4Q9C8')
+    emailjs.sendForm('service_3pfrpss', 'template_3807sga', form.current, 'ZmshJyzg1wMTVucdb')
       .then(() => {
         setIsSending(false);
         setOpen(true);
