@@ -182,7 +182,7 @@ export const Bio = {
     "I’m a programmer and technical support specialist skilled in mobile, web, and desktop app development. I have strong OOP knowledge, experience with Windows and Linux systems, and basic networking skills. A fast learner and team player, I'm highly motivated to grow and contribute in the tech industry.",
   github: "https://github.com/laode18",
   resume:
-    "https://docs.google.com/document/d/1fL9hOrxT5Z-NZD3txWQoIrOC4Q-eGpmF/edit?usp=sharing&ouid=107996906044616795075&rtpof=true&sd=true",
+    "https://drive.google.com/file/d/1KFpBQ9vSFtphFco1Gp9JXY_-_ogbaPzb/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/la-ode-muhammad-fitrah-197a24294",
   whatsapp: "https://wa.me/6285156457508",
   insta: "https://instagram.com/mr_l_18",
