@@ -177,12 +177,13 @@ export const Bio = {
     "Android Developer",
     "Technical Support",
     "Programmer",
+    "Web3 Developer",
   ],
   description:
     "I’m a programmer and technical support specialist skilled in mobile, web, and desktop app development. I have strong OOP knowledge, experience with Windows and Linux systems, and basic networking skills. A fast learner and team player, I'm highly motivated to grow and contribute in the tech industry.",
   github: "https://github.com/laode18",
   resume:
-    "https://drive.google.com/file/d/1KFpBQ9vSFtphFco1Gp9JXY_-_ogbaPzb/view?usp=sharing",
+    "https://drive.google.com/file/d/1_MzkasU9f2FjEOJm1tIThhbI7w9qtGwA/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/la-ode-muhammad-fitrah-197a24294",
   whatsapp: "https://wa.me/6285156457508",
   insta: "https://instagram.com/mr_l_18",
@@ -442,7 +443,7 @@ export const skills = [
         image: lanImage,
       },
       {
-        name: "Server Configuration (Fundamental)",
+        name: "Wi-Fi Configuration",
         image: serverconfImage,
       },
     ],
