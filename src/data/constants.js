@@ -170,6 +170,14 @@ import a22Image from '../images/portofolio/22/22a.png';
 import b22Image from '../images/portofolio/22/22b.png';
 import c22Image from '../images/portofolio/22/22c.png';
 
+import a23Image from '../images/portofolio/23/23a.png';
+import b23Image from '../images/portofolio/23/23b.png';
+import c23Image from '../images/portofolio/23/23c.png';
+
+import a24Image from '../images/portofolio/24/24a.png';
+import b24Image from '../images/portofolio/24/24b.png';
+import c24Image from '../images/portofolio/24/24c.png';
+
 export const Bio = {
   name: "La Ode Muhammad Fitrah",
   roles: [
@@ -183,7 +191,7 @@ export const Bio = {
     "I’m a programmer and technical support specialist skilled in mobile, web, and desktop app development. I have strong OOP knowledge, experience with Windows and Linux systems, and basic networking skills. A fast learner and team player, I'm highly motivated to grow and contribute in the tech industry.",
   github: "https://github.com/laode18",
   resume:
-    "https://drive.google.com/file/d/1_MzkasU9f2FjEOJm1tIThhbI7w9qtGwA/view?usp=sharing",
+    "https://drive.google.com/file/d/16fPw9N20KIJTw1Ar1oQZ9IK2It1bZGm5/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/la-ode-muhammad-fitrah-197a24294",
   whatsapp: "https://wa.me/6285156457508",
   insta: "https://instagram.com/mr_l_18",
@@ -840,6 +848,28 @@ export const projects = [
       c22Image
     ],
     tags: ["Laravel", "PHP", "RESTful API", "Vue Js", "Vue Router", "Vuex", "MySQL", "JavaScript", "Vuetify", "Laravel Mix"],
+    category: "web app",
+  },
+  {
+    id: 22,
+    title: "Library Management System (E-Library)",
+    image: [
+      a23Image,
+      b23Image,
+      c23Image
+    ],
+    tags: ["Laravel", "PHP", "RESTful API", "MySQL", "JavaScript", "CSS", "Bootstrap", "Laravel Sanctum"],
+    category: "web app",
+  },
+  {
+    id: 23,
+    title: "Supplier Management System",
+    image: [
+      a24Image,
+      b24Image,
+      c24Image
+    ],
+    tags: ["React JS", "Vite JS", "Tailwind CSS", "Ant Design", "JavaScript", "Typescript", "Node JS", "Express JS", "Three JS"],
     category: "web app",
   },
 ];

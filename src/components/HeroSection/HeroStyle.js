@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import _default from "../../themes/default";
 
 export const HeroContainer = styled.div`
@@ -92,24 +92,76 @@ export const HeroRightContainer = styled.div`
   }
 `;
 
-export const Img = styled.img`
-  position: relative;
+/* Flip bolak-balik: 0–180 (tampil belakang) – 360 (kembali depan) */
+const flipFlop = keyframes`
+  0%   { transform: rotateY(0deg); }
+  45%  { transform: rotateY(0deg); }
+  50%  { transform: rotateY(90deg); }
+  55%  { transform: rotateY(180deg); }  /* belakang terlihat */
+  95%  { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }  /* kembali depan */
+`;
+
+/* Shimmer khusus pada teks "Resume" saja */
+const textShimmer = keyframes`
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+`;
+
+const tripleSpinFast = keyframes`
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); } /* 3 putaran penuh (3x360) */
+`;
+
+export const FlipCard = styled.div`
+  perspective: 1200px;
   width: 100%;
-  height: 100%;
   max-width: 400px;
-  max-height: 400px;
-  border-radius: 50%;
-  border: 2px solid ${({ theme }) => theme.primary};
+  aspect-ratio: 1/1;
 
   @media (max-width: 768px) {
     max-width: 400px;
-    max-height: 400px;
   }
-
   @media (max-width: 640px) {
     max-width: 280px;
-    max-height: 280px;
   }
+`;
+
+export const FlipCardInner = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  
+  &.flip-fast {
+    animation: ${tripleSpinFast} 1s ease-in-out;
+  }
+`;
+
+const FlipFaceBase = styled.div`
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid ${({ theme }) => theme.primary};
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  /* gambar di dalam wajah */
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+export const FlipFaceFront = styled(FlipFaceBase)`
+  transform: rotateY(0deg);
+`;
+
+export const FlipFaceBack = styled(FlipFaceBase)`
+  transform: rotateY(180deg);
 `;
 
 export const Title = styled.div`
@@ -167,37 +219,52 @@ export const SubTitle = styled.div`
 `;
 
 export const ResumeButton = styled.a`
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    width: 95%;
-    max-width: 300px;
-    text-align: center;
-    padding: 16px 0;
-    color:${({ theme }) => theme.white};
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out !important;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    box-shadow:  20px 20px 60px #1F2634,
-    -20px -20px 60px #1F2634;
-    &:hover {
-        transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
-    }    
-    
-    
-    @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
-    } 
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  width: 95%;
+  max-width: 300px;
+  text-align: center;
+  padding: 16px 0;
+  color:${({ theme }) => theme.white};
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out !important;
+  background: hsla(271, 100%, 50%, 1);
+  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  box-shadow:  20px 20px 60px #1F2634, -20px -20px 60px #1F2634;
 
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+    box-shadow:  20px 20px 60px #1F2634;
+    filter: brightness(1);
+  }    
+
+  @media (max-width: 640px) {
+    padding: 12px 0;
+    font-size: 18px;
+  } 
+`;
+
+// === Hanya tulisan "Resume" yang berkilau ===
+export const ResumeSparkle = styled.span`
+  display: inline-block;
+  margin-left: 6px;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.55) 0%,
+    #ffffff 20%,
+    rgba(255,255,255,0.55) 40%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: ${textShimmer} 2s linear infinite;
 `;
