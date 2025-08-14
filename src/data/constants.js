@@ -47,6 +47,9 @@ import flashImage from '../images/design/adobe-flash.png';
 import premierImage from '../images/design/adobe-premier.png';
 import filmoraImage from '../images/design/filmora.png';
 import capcutImage from '../images/design/capcut.png';
+import photopeaImage from '../images/design/photopea.png';
+import figmaImage from '../images/design/figma.png';
+import canvaImage from '../images/design/canva.png';
 
 import wordImage from '../images/administrative/microsoft-word.png';
 import excelImage from '../images/administrative/microsoft-excel.png';
@@ -404,10 +407,22 @@ export const skills = [
         name: "Capcut",
         image: capcutImage,
       },
+      {
+        name: "Photopea",
+        image: photopeaImage,
+      },
+      {
+        name: "Figma",
+        image: figmaImage,
+      },
+      {
+        name: "Canva",
+        image: canvaImage,
+      },
     ],
   },
   {
-    title: "Administrative",
+    title: "Administrative & OS",
     skills: [
       {
         name: "Microsof Word",
