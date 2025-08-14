@@ -40,7 +40,7 @@ const Navbar = () => {
           <NavLink to="skills" smooth={true} duration={500} spy={true} offset={-80} activeClass="active">
             Skills
           </NavLink>
-          <NavLink to="experience" smooth={true} duration={500} spy={true} activeClass="active">
+          <NavLink to="experience" smooth={true} duration={500} spy={true} offset={-80} activeClass="active">
             Experience
           </NavLink>
           <NavLink to="projects" smooth={true} duration={500} spy={true} offset={-80} activeClass="active">
@@ -83,6 +83,7 @@ const Navbar = () => {
               to="experience"
               smooth={true}
               duration={500}
+              offset={-70}
               onClick={() => setIsOpen(false)}
             >
               Experience
