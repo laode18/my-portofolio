@@ -1,4 +1,4 @@
-import { Link as LinkR } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import styled from 'styled-components';
 import _default from '../../themes/default';
 
@@ -27,7 +27,7 @@ export const NavbarContainer = styled.div`
   max-width: 1200px;
 `;
 
-export const NavLogo = styled(LinkR)`
+export const NavLogo = styled(ScrollLink)`
     width: 80%;    
     padding: 0 6px;
     margin-top: 25px;
@@ -58,19 +58,21 @@ export const NavItems = styled.ul`
     }
 `;
 
-export const NavLink = styled.a`
-    color: ${({ theme }) => theme.text_primary};
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    :hover {
-      color: ${({ theme }) => theme.primary};
-    }
+export const NavLink = styled(ScrollLink)`
+  color: ${({ theme }) => theme.text_primary};
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
 
-    &.active {
-      border-bottom: 2px solid ${({ theme }) => theme.primary};
-    }
+  &.active {
+    color: ${({ theme }) => theme.primary};
+    border-bottom: 2px solid ${({ theme }) => theme.primary};
+  }
+
+  :hover {
+    color: ${({ theme }) => theme.primary};
+  }
 `;
 
 
@@ -155,7 +157,7 @@ export const MobileMenuItems = styled.ul`
   height: 100%;
 `
 
-export const MobileMenuLink = styled(LinkR)`
+export const MobileMenuLink = styled(ScrollLink)`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
@@ -206,7 +208,7 @@ export  const MobileLink = styled.a`
   }
 `;
 
-export const MobileNavLogo = styled(LinkR)`
+export const MobileNavLogo = styled(ScrollLink)`
   width: 80%;
   padding: 0 6px;
   display: flex;

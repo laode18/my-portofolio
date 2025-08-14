@@ -7,6 +7,7 @@ import { Close, CloseRounded } from '@mui/icons-material';
 import { useTheme } from 'styled-components';
 import IconLogo from '../../images/logos2.png'
 import { FaGithub } from 'react-icons/fa';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -26,12 +27,31 @@ const Navbar = () => {
           }} />
         </MobileIcon>
         <NavItems>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href='#skills'>Skills</NavLink>
-          <NavLink href='#experience'>Experience</NavLink>
-          <NavLink href='#projects'>Projects</NavLink>
-          <NavLink href="#certificate">Certificate</NavLink>
-          <NavLink href='#education'>Education</NavLink>
+          <NavLink 
+            to="about" 
+            smooth={true} 
+            duration={500} 
+            spy={true} 
+            offset={-80} 
+            activeClass="active"
+          >
+            About
+          </NavLink>
+          <NavLink to="skills" smooth={true} duration={500} spy={true} offset={-80} activeClass="active">
+            Skills
+          </NavLink>
+          <NavLink to="experience" smooth={true} duration={500} spy={true} activeClass="active">
+            Experience
+          </NavLink>
+          <NavLink to="projects" smooth={true} duration={500} spy={true} offset={-80} activeClass="active">
+            Projects
+          </NavLink>
+          <NavLink to="certificate" smooth={true} duration={500} spy={true} offset={-80} activeClass="active">
+            Certificate
+          </NavLink>
+          <NavLink to="education" smooth={true} duration={500} spy={true} offset={-80} activeClass="active">
+            Education
+          </NavLink>
         </NavItems>
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank"><FaGithub style={{ marginRight: "10px" }}/> Github Profile</GitHubButton>
@@ -39,22 +59,67 @@ const Navbar = () => {
         {
           isOpen &&
           <MobileMenu isOpen={isOpen}>
-            <MobileLink href="#about" onClick={() => {
-              setIsOpen(!isOpen)
-            }}>About</MobileLink>
-            <MobileLink href='#skills' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Skills</MobileLink>
-            <MobileLink href='#experience' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Experience</MobileLink>
-            <MobileLink href='#projects' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Projects</MobileLink>
-            <MobileLink href='#education' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Education</MobileLink>
-            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank"><FaGithub style={{ marginRight: "10px" }}/>Github Profile</GitHubButton>
+            <MobileLink as={ScrollLink}
+              to="about"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={() => setIsOpen(false)}
+            >
+              About
+            </MobileLink>
+
+            <MobileLink as={ScrollLink}
+              to="skills"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={() => setIsOpen(false)}
+            >
+              Skills
+            </MobileLink>
+
+            <MobileLink as={ScrollLink}
+              to="experience"
+              smooth={true}
+              duration={500}
+              onClick={() => setIsOpen(false)}
+            >
+              Experience
+            </MobileLink>
+
+            <MobileLink as={ScrollLink}
+              to="projects"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={() => setIsOpen(false)}
+            >
+              Projects
+            </MobileLink>
+
+            <MobileLink as={ScrollLink}
+              to="education"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={() => setIsOpen(false)}
+            >
+              Education
+            </MobileLink>
+
+            <GitHubButton
+              style={{
+                padding: "10px 16px",
+                background: theme.primary,
+                color: "white",
+                width: "max-content"
+              }}
+              href={Bio.github}
+              target="_blank"
+            >
+              <FaGithub style={{ marginRight: "10px" }} /> Github Profile
+            </GitHubButton>
           </MobileMenu>
         }
       </NavbarContainer>
