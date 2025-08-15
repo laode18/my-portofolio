@@ -9,6 +9,7 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import ExperienceCard from '../Cards/ExperienceCard';
 import { experiences, organizations } from '../../data/constants';
 import { motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 // ==== Styled Components ====
 const Container = styled(motion.div)`
@@ -76,6 +77,12 @@ const zoomFade = {
     scale: 1,
     filter: 'blur(0px)',
     transition: { duration: 0.7, ease: 'easeOut' }
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.9,
+    filter: 'blur(6px)',
+    transition: { duration: 0.5, ease: 'easeIn' }
   }
 };
 
@@ -128,9 +135,18 @@ const ExperienceSection = () => {
         </TimelineSection>
 
         <br />
-        <Desc variants={zoomFade}>
-          There are also several organizational experiences that I have gone through and completed well.
-        </Desc>
+        <AnimatePresence mode="wait">
+          <Desc
+            key="org-desc"
+            variants={zoomFade}
+            initial="hidden"
+            whileInView="visible"
+            exit="exit"
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            There are also several organizational experiences that I have gone through and completed well.
+          </Desc>
+        </AnimatePresence>
 
         <TimelineSection>
           <Timeline position="alternate">
