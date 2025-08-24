@@ -84,6 +84,7 @@ import ser5Image from '../images/sertifikat/ser5.jpg';
 import ser6Image from '../images/sertifikat/ser6.jpg';
 import ser7Image from '../images/sertifikat/ser7.png';
 import ser8Image from '../images/sertifikat/ser8.jpeg';
+import ser9Image from '../images/sertifikat/ser9.jpg';
 
 import a1Image from '../images/portofolio/1/1a.png';
 import b1Image from '../images/portofolio/1/1b.png';
@@ -180,6 +181,10 @@ import c23Image from '../images/portofolio/23/23c.png';
 import a24Image from '../images/portofolio/24/24a.png';
 import b24Image from '../images/portofolio/24/24b.png';
 import c24Image from '../images/portofolio/24/24c.png';
+
+import a25Image from '../images/portofolio/25/25a.png';
+import b25Image from '../images/portofolio/25/25b.png';
+import c25Image from '../images/portofolio/25/25c.png';
 
 export const Bio = {
   name: "La Ode Muhammad Fitrah",
@@ -887,6 +892,17 @@ export const projects = [
     tags: ["React JS", "Vite JS", "Tailwind CSS", "Ant Design", "JavaScript", "Typescript", "Node JS", "Express JS", "Three JS"],
     category: "web app",
   },
+  {
+    id: 24,
+    title: "Student Attendance and Assessment Information System at YPI Bandung Middle School",
+    image: [
+      a25Image,
+      b25Image,
+      c25Image
+    ],
+    tags: ["Laravel", "PHP", "RESTful API", "MySQL", "JavaScript", "CSS", "Bootstrap", "HTML2Canvas + jsPDF", "Export Excel"],
+    category: "web app",
+  },
 ];
 
 export const certificates = [
@@ -946,6 +962,15 @@ export const certificates = [
   },
   {
     id: 5,
+    title: "Course Certificate (Cisco Dasar)",
+    date: "12 Okt 2023",
+    description:
+      "Published by : ID-Networkers",
+    image:
+      ser8Image,
+  },
+  {
+    id: 6,
     title: "Internship Student Certificate",
     date: "18 Jan 2022",
     description:
@@ -954,7 +979,7 @@ export const certificates = [
       ser7Image,
   },
   {
-    id: 6,
+    id: 7,
     title: "Internship Certificate",
     date: "13 Jun 2023",
     description:
