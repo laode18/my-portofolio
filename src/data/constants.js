@@ -967,7 +967,7 @@ export const certificates = [
     description:
       "Published by : ID-Networkers",
     image:
-      ser8Image,
+      ser9Image,
   },
   {
     id: 6,
