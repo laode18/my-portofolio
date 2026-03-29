@@ -69,6 +69,7 @@ import kputedcImage from '../images/workexp/kpu-tedc1.jpg';
 import kpusosImage from '../images/workexp/kpu-sos1.jpg';
 import dpmImage from '../images/workexp/dpm1.jpg';
 import sosImage from '../images/workexp/sos1.jpg';
+import medprimImage from '../images/workexp/medprim.jpg';
 
 import tk2Image from '../images/education/tk2.jpg';
 import sd2Image from '../images/education/sd2.jpg';
@@ -498,7 +499,7 @@ export const experiences = [
     ],
   },
   {
-    id: 0,
+    id: 1,
     img: cropImage,
     role: "Programmer Intern",
     company: "PT. Crop Inspirasi Digital",
@@ -515,6 +516,26 @@ export const experiences = [
       "Innovative Tech Solution Implementation",
     ],
   },
+  {
+    id: 2,
+    img: medprimImage,
+    role: "Front-End Developer",
+    company: "Media Prima HR Solution",
+    date: "Sep 2025 - Now",
+    desc: "Develop and maintain an internal Enterprise Resource Planning (ERP) web application used within the company to manage various business processes. Responsible for building scalable and responsive user interfaces across multiple ERP modules, collaborating with backend developers and stakeholders to implement new features, improve system performance, and ensure a consistent user experience. Also involved in debugging, system optimization, and maintaining clean and maintainable front-end architecture.",
+    skills: [
+      "ERP System Development",
+      "Front-End Web Development",
+      "Responsive UI Development",
+      "Modular Application Architecture",
+      "API Integration",
+      "Performance Optimization",
+      "Debugging & Troubleshooting",
+      "User Interface (UI) & User Experience (UX)",
+      "Version Control (Git)",
+      "Team Collaboration & Agile Workflow"
+    ],
+  }
 ];
 
 export const organizations = [
