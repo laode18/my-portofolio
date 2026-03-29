@@ -1,5 +1,6 @@
 import { Link as ScrollLink } from 'react-scroll';
 import styled from 'styled-components';
+// eslint-disable-next-line no-unused-vars
 import _default from '../../themes/default';
 
 export const Nav = styled.div`

@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+// eslint-disable-next-line no-unused-vars
 import _default from "../../themes/default";
 
 export const HeroContainer = styled.div`
@@ -90,16 +91,6 @@ export const HeroRightContainer = styled.div`
   @media (max-width: 640px) {
     margin-bottom: 30px;
   }
-`;
-
-/* Flip bolak-balik: 0–180 (tampil belakang) – 360 (kembali depan) */
-const flipFlop = keyframes`
-  0%   { transform: rotateY(0deg); }
-  45%  { transform: rotateY(0deg); }
-  50%  { transform: rotateY(90deg); }
-  55%  { transform: rotateY(180deg); }  /* belakang terlihat */
-  95%  { transform: rotateY(180deg); }
-  100% { transform: rotateY(360deg); }  /* kembali depan */
 `;
 
 /* Shimmer khusus pada teks "Resume" saja */
