@@ -533,7 +533,7 @@ export const experiences = [
       "Debugging & Troubleshooting",
       "User Interface (UI) & User Experience (UX)",
       "Version Control (Git)",
-      "Team Collaboration"
+      "Team Collaboration & Agile Workflow"
     ],
   }
 ];
